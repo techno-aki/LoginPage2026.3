@@ -10,10 +10,12 @@
 
 
 <body style="background-image: linear-gradient(to right top, #aca7ac, #807f86, #565a61, #2e373d, #09181a); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<a class="navbar-brand" href="index.jsp">
+    <img src="<%= request.getContextPath() %>/images/appleLogo.png" alt="Logo">
+</a>  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -30,10 +32,6 @@
       </li>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
