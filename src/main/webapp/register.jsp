@@ -22,12 +22,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.jsp">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="login.jsp">Login</a>
       </li>
- <li class="nav-item">
+ <li class="nav-item active">
         <a class="nav-link" href="register.jsp">Register</a>
       </li>
 
