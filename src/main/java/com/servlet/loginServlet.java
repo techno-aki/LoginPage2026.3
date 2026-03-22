@@ -14,23 +14,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/loginServlet")
-public class loginServlet extends HttpServlet
-{
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
-        String email =(String) request.getParameter("email");
-        String password =(String) request.getParameter("password");
+public class loginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = (String) request.getParameter("email");
+        String password = (String) request.getParameter("password");
         UserDAO dao = new UserDAO(DBConnect.getConnection());
         User user = dao.getLogin(email, password);
 
-        if(user!=null)
-        {
+        if (user != null) {
             HttpSession session = request.getSession();
             session.setAttribute("usr-obj", user);
             response.sendRedirect("home.jsp");
 
-        }
-        else{
+        } else {
             HttpSession session = request.getSession();
             session.setAttribute("error-msg", "Invalid email and password");
             response.sendRedirect("login.jsp");

@@ -14,10 +14,10 @@ import java.util.Enumeration;
 
 @WebServlet("/registerServlet")
 public class registerServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-String name= request.getParameter("uname");
-        String email= request.getParameter("email");
-        String password= request.getParameter("password");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("uname");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
 
         User us = new User();
         us.setName(name);
@@ -27,13 +27,14 @@ String name= request.getParameter("uname");
         UserDAO dao = new UserDAO(DBConnect.getConnection());
         boolean f = dao.userRegister(us);
 
-        if(true) {
+        if (true) {
             HttpSession session = request.getSession();
             session.setAttribute("reg-msg", "Registration Successfully !!");
             response.sendRedirect("register.jsp");
-        }else{
+        } else {
             HttpSession session = request.getSession();
             session.setAttribute("error-msg", "Registration Failed !!");
-            response.sendRedirect("register.jsp");        }
+            response.sendRedirect("register.jsp");
+        }
     }
 }

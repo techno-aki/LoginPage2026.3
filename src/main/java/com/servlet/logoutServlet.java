@@ -9,11 +9,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/logoutServlet")
-public class logoutServlet extends HttpServlet
-{
+public class logoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
-            ServletException, IOException
-    {
+            ServletException, IOException {
         HttpSession session = request.getSession();
         session.removeAttribute("usr-obj");
 
